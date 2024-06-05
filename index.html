@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Array Programs</title>
+</head>
+<body>
+  <h1>JavaScript Array Programs</h1>
+
+  <script>
+    // Task 1: Declare an Empty Array using JS Literal Notation
+    var studentNamesLiteral = [];
+
+    // Task 2: Declare an Empty Array using JS Object Notation
+    var studentNamesObject = new Array();
+
+    // Task 3: Declare and Initialize a Strings Array
+    var stringsArray = ["apple", "banana", "orange"];
+
+    // Task 4: Declare and Initialize a Numbers Array
+    var numbersArray = [1, 2, 3, 4, 5];
+
+    // Task 5: Declare and Initialize a Boolean Array
+    var booleanArray = [true, false, true];
+
+    // Task 6: Declare and Initialize a Mixed Array
+    var mixedArray = [1, "apple", true];
+
+    // Task 7: Declare and Initialize an Array for Education Qualifications
+    var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+    document.write("<h2>Educational Qualifications in Pakistan:</h2>");
+    document.write("<ul>");
+    for (var i = 0; i < qualifications.length; i++) {
+        document.write("<li>" + qualifications[i] + "</li>");
+    }
+    document.write("</ul>");
+
+    // Task 8: Store Student Names and Scores
+    var studentNames = ["John", "Alice", "Bob"];
+    var scores = [400, 450, 480];
+    var totalMarks = 500;
+
+    for (var i = 0; i < studentNames.length; i++) {
+        var percentage = (scores[i] / totalMarks) * 100;
+        document.write("Name: " + studentNames[i] + ", Score: " + scores[i] + ", Percentage: " + percentage + "%<br>");
+    }
+
+    // Task 9: Manipulate Color Array
+    var colors = ["red", "blue", "green"];
+
+    // a.
+    var colorToAddBeginning = prompt("Enter a color to add to the beginning:");
+    colors.unshift(colorToAddBeginning);
+
+    // b.
+    var colorToAddEnd = prompt("Enter a color to add to the end:");
+    colors.push(colorToAddEnd);
+
+    // c.
+    colors.unshift("yellow", "orange");
+
+    // d.
+    colors.shift();
+
+    // e.
+    colors.pop();
+
+    // f.
+    var indexToAdd = parseInt(prompt("Enter the index to add a color:"));
+    var colorToAdd = prompt("Enter the color to add:");
+    colors.splice(indexToAdd, 0, colorToAdd);
+
+    // g.
+    var indexToDelete = parseInt(prompt("Enter the index to delete colors:"));
+    var numberOfColorsToDelete = parseInt(prompt("Enter the number of colors to delete:"));
+    colors.splice(indexToDelete, numberOfColorsToDelete);
+
+    // Display the updated array
+    document.write("Updated Colors Array: " + colors);
+
+    // Task 10: Sort Student Scores in Ascending Order
+    var studentScores = [78, 92, 85, 65, 98];
+    studentScores.sort(function(a, b) {
+        return a - b;
+    });
+    document.write("Sorted Student Scores: " + studentScores);
+  </script>
+  <br>
+    <a href="https://sadiafurqan.github.io/javascript-assigments/">javascript-assigments</a>
+</body>
+</html>
